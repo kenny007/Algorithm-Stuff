@@ -29,5 +29,9 @@ function containsCommonItem(arr1, arr2) {
 
 containsCommonItem(array1, array2);
 
+containsCommonItem2(arr1, arr2){
+  return arr1.some(item => arr2.includes(item));
+}
+
 // ### HOW TO BREAK THIS CODE
 // If the second array isn't supplied kasala to gass o
