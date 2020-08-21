@@ -3,20 +3,20 @@
 const lengthOfLongestSubstring = function (s) {
   let n = s.length;
   const set = new Set();
-  let counter = 0, i = 0, j = 0;
+  let subt = 0, i = 0, j = 0;
   while (i < n && j < n) {
     // extend the range of i and j by sliding to the right
     if (!set.has(s.charAt(j))) {
       set.add(s.charAt(j++));
-      counter = Math.max(counter, j - i);
+      subt = Math.max(subt, j - i);
     }
     else {
       set.delete(s.charAt(i++));
       // we are deleting it because it has been found since this is what we are comparing against
     }
   }
-  console.log(counter);
-  return counter;
+  console.log(subt);
+  return subt;
 }
 
 const lengthOfLongestSubstring2 = function (s) {
